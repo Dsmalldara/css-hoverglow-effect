@@ -1,0 +1,40 @@
+body {
+    background-color: #000000;
+}
+
+div#light-container {
+    height: 10rem;
+    width: 30rem;
+    background-color: #525252;
+    border-radius: 12px;
+    margin: 3em auto;
+    position: relative;
+    overflow: hidden;
+    border: 0.1px solid #fff;
+}
+
+
+
+div#light {
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(#7373ff,#ffffff, #7373ff);
+    width: 6px;
+    height: 40px;
+    animation: live 2s infinite alternate;
+    animation: glow 1s 1 forwards;
+    display: none;
+    border-radius: 50%;
+}
+
+@keyframes live {
+    0% { height: 30px;}
+    50% {height: 25px;}
+    100% {height: 30px;}
+}
+
+@keyframes glow{
+    from {box-shadow: none;}
+    to {box-shadow: -2px 0 20px 10px #9ec0ff;}
+}
+
